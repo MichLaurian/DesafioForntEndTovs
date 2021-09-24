@@ -1,14 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "b679e6e8-a44b-45cf-bb67-f5ed0a12ddbe"
+    "analytics": "776aa131-6e0e-4844-9d63-76c2c95f5998"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "desafiofornt": {
+    "pokeappi": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,17 +23,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/desafiofornt",
+            "outputPath": "dist/pokeappi",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -71,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "desafiofornt:build:production"
+              "browserTarget": "pokeappi:build:production"
             },
             "development": {
-              "browserTarget": "desafiofornt:build:development"
+              "browserTarget": "pokeappi:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "desafiofornt:build"
+            "browserTarget": "pokeappi:build"
           }
         },
         "test": {
@@ -92,12 +97,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "desafiofornt"
+  "defaultProject": "pokeappi"
 }
