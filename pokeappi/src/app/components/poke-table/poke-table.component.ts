@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-poke-table',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poke-table.component.scss']
 })
 export class PokeTableComponent implements OnInit {
-
-  constructor() { }
+// injeted a service
+  constructor(private dataService: PokemonService) { }
 
   ngOnInit(): void {
   }
