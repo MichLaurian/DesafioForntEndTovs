@@ -8,9 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PokeDetailComponent } from './components/poke-detail/poke-detail.component';
 import { PokeTableComponent } from './components/poke-table/poke-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
