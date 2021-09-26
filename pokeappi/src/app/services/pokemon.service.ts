@@ -11,12 +11,16 @@ export class PokemonService {
   // get pokemons
 
   getPokemon(){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10')
+    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=50')
   }
 
   // get more pokemons
 
   getMoreData(name:string){
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+  }
+
+  getAll(name:String){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
   }
 }

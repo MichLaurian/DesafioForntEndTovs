@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from 'src/app/services/pokemon.service';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-poke-table',
   templateUrl: './poke-table.component.html',
@@ -12,7 +12,7 @@ export class PokeTableComponent implements OnInit {
 
 
 // injeted a service
-  constructor(private dataService: PokemonService) { }
+  constructor(private dataService: PokemonService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.dataService.getPokemon()

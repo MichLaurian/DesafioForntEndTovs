@@ -9,13 +9,15 @@ import { PokeDetailComponent } from './components/poke-detail/poke-detail.compon
 import { PokeTableComponent } from './components/poke-table/poke-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsharedComponent } from './components/formshared/formshared.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     PokeDetailComponent,
-    PokeTableComponent
+    PokeTableComponent,
+    FormsharedComponent
   ],
   imports: [
     BrowserModule,
