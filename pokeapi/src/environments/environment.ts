@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrlAPI:' https://pokeapi.co/api/v2/pokemon/'
+  baseUrlAPI:'https://rickandmortyapi.com/api/character/'
 };
 
 /*

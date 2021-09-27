@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class CharacterService {
   constructor(private http: HttpClient) {}
 
-  searCharacters(query = '', page = 1) {
+  searCharacters(query = ' ', page = 1) {
     const filter = `${environment.baseUrlAPI}/?name=${query}&page=${page}`;
     return this.http.get<Character[]>(filter);
   }
